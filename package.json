@@ -1,0 +1,59 @@
+{
+  "name": "calendar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp --production"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "last 1 chrome version",
+    "last 1 firefox version",
+    "last 1 safari version"
+  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "browser-sync": "^2.27.10",
+    "css-import": "^0.0.1",
+    "dart-sass": "^1.25.0",
+    "del": "^6.1.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-cssimport": "^7.0.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-format-html": "^1.2.7",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-shorthand": "^1.1.0",
+    "prettier": "2.8.1",
+    "webpack": "^5.74.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "simplebar": "^5.3.9"
+  }
+}

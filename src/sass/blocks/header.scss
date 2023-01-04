@@ -1,0 +1,74 @@
+.header {
+  background: $neutral;
+  box-shadow: 0 4px 5px -5px $dark2;
+  &__container {
+    display: flex;
+    align-items: flex-end;
+    height: 100px;
+  }
+  &__control {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 48px;
+  }
+  &__buttons {
+    display: flex;
+    gap: 10px;
+  }
+  &__button {
+    width: 80px;
+    height: 26px;
+  }
+  &__search {
+    display: flex;
+    gap: 10px;
+    .input-area {
+      position: relative;
+      height: 28px;
+    }
+  }
+  &__img {
+    width: 18px;
+    height: 18px;
+    margin-top: 4px;
+    cursor: pointer;
+  }
+  &__input {
+    width: 210px;
+    height: 28px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0 5px;
+  }
+  .header {
+    &__container {
+      height: 110px;
+      align-items: center;
+    }
+    &__control {
+      justify-content: center;
+      gap: 20px;
+    }
+    &__buttons {
+      gap: 30px;
+    }
+    &__button {
+      width: 80px;
+      height: 28px;
+    }
+    &__input {
+      width: 230px;
+      height: 30px;
+    }
+    &__img {
+      width: 22px;
+      height: 22px;
+      margin-top: 2px;
+    }
+  }
+}

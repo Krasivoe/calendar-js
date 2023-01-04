@@ -1,0 +1,19 @@
+<header class="header">
+  <div class="header__container container">
+    <div class="header__control">
+      <div class="header__buttons">
+        <button class="header__button btn btn-blue" id="addQuick">Добавить</button>
+        <button class="header__button btn btn-blue" id="updateAll">Обновить</button>
+        @@include("quickPopup.html")
+      </div>
+      <div class="header__search">
+        <img class="header__img" id="btnSearch" src="img/elements/search.svg" alt="#">
+        <div class="input-area">
+          <input class="header__input input" id="inpSearch" type="text" placeholder="Начните вводить">
+          <span class="input_cross"></span>
+        </div>
+        @@include("searchPopup.html")
+      </div>
+    </div>
+  </div>
+</header>

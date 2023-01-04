@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="icon" href="img/elements/calendar.ico">
+  <script defer type="module" src="js/main.js"></script>
+  <title>Calendar</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    @@include("chunk/header.html")
+    <main class="content container">
+      <section class="control">
+        <div class="control__month">
+          <button class="control__btn_prev btn btn-icon" id="previous"></button>
+          <div class="control__date" id="todayDate">Февраль 2222</div>
+          <button class="control__btn btn btn-icon" id="next"></button>
+        </div>
+        <button class="control__button btn btn-extra" id="today">Сегодня</button>
+      </section>
+      <section class="calendar" id="calendarApp">
+      </section>
+    </main>
+
+    <div class="modal" id="modalWindow">
+      @@include("chunk/eventPopup.html")
+      @@include("chunk/viewPopup.html")
+    </div>
+  </div>
+</body>
+
+</html>

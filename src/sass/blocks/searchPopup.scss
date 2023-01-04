@@ -1,0 +1,107 @@
+.search {
+  position: absolute;
+  top: 90px;
+  z-index: -1;
+  width: 210px;
+  min-height: 55px;
+  max-height: 308px;
+  padding: 6px 4px;
+  margin-left: 28px;
+  opacity: 0;
+  transition: all 0s;
+  &.open {
+    opacity: 1;
+    z-index: 3;
+    transition: all 0.2s linear;
+  }
+  &:before {
+    position: absolute;
+    bottom: 100%;
+    width: 18px;
+    height: 14px;
+    content: url("../img/popup/arrowTop.svg");
+    margin-left: 17px;
+  }
+  &__inner {
+    @include font14();
+    font-weight: 500;
+    overflow: auto;
+  }
+  &__area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    min-height: 45px;
+  }
+  &__result {
+    max-width: 190px;
+    height: 44px;
+    padding: 4px 9px;
+    transition: all 0.1s linear;
+    cursor: pointer;
+    &:hover {
+      background: $blue2;
+      & .search__text {
+        color: $white;
+      }
+    }
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    max-width: 200px;
+    padding: 4px 9px;
+  }
+  &__text {
+    @include flex-column();
+    gap: 6px;
+    color: $dark2;
+  }
+  &__title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  &__date {
+    @include font12();
+    font-weight: 300;
+  }
+}
+
+//Scroll
+.simplebar-content {
+  max-height: 302px;
+}
+
+.simplebar-track {
+  &.simplebar-vertical {
+    top: 7px;
+    bottom: 7px;
+    margin-right: 2px;
+  }
+}
+
+.simplebar-scrollbar {
+  min-height: 35px;
+  &.simplebar-visible::before,
+  &::before {
+    width: 6px;
+    border-radius: 10px;
+    background: #c4c4c4;
+    opacity: 1;
+  }
+  &:hover::before {
+    background: $dark;
+  }
+}
+
+//Mobile
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  .search {
+    top: 106px;
+    width: 230px;
+    margin-left: 32px;
+  }
+}

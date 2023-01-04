@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="icon" href="img/elements/calendar.ico">
+  <script defer type="module" src="js/main.js"></script>
+  <title>Calendar</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container container">
+        <div class="header__control">
+          <div class="header__buttons">
+            <button class="header__button btn btn-blue" id="addQuick">Добавить</button>
+            <button class="header__button btn btn-blue" id="updateAll">Обновить</button>
+            <div class="quick popup" id="quickPopup">
+              <div class="close">
+                <div class="close__cross" id="quickClose">
+                  <img src="img/popup/cross.svg" alt="close">
+                </div>
+              </div>
+              <input class="quick__input input" id="quickEvent" type="text" placeholder="16 октября, Кутеж, Олег" autocomplete="off">
+              <div class="quick__buttons">
+                <button class="quick__button btn btn-extra" id="quickCreate">Создать</button>
+              </div>
+            </div>
+
+          </div>
+          <div class="header__search">
+            <img class="header__img" id="btnSearch" src="img/elements/search.svg" alt="#">
+            <div class="input-area">
+              <input class="header__input input" id="inpSearch" type="text" placeholder="Начните вводить">
+              <span class="input_cross"></span>
+            </div>
+            <div class="search popup" id="searchPopup">
+              <div class="search__inner">
+                <ul class="search__area" id="searchContent">
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="content container">
+      <section class="control">
+        <div class="control__month">
+          <button class="control__btn_prev btn btn-icon" id="previous"></button>
+          <div class="control__date" id="todayDate">Февраль 2222</div>
+          <button class="control__btn btn btn-icon" id="next"></button>
+        </div>
+        <button class="control__button btn btn-extra" id="today">Сегодня</button>
+      </section>
+      <section class="calendar" id="calendarApp">
+      </section>
+    </main>
+
+    <div class="modal" id="modalWindow">
+      <div class="event popup" id="eventPopup">
+        <img class="popup__arrow" src="img/popup/arrowLeft.svg" alt="arrow" />
+        <div class="event__top">
+          <div class="close">
+            <div class="close__cross" id="eventClose">
+              <img class="popup__img" src="img/popup/cross.svg" alt="close">
+            </div>
+          </div>
+          <div class="event__inputs">
+            <input class="event__input input" id="eventName" type="text" placeholder="Событие" autocomplete="off">
+            <input class="event__input input" id="eventDate" type="text">
+            <input class="event__input input" id="eventPeople" type="text" placeholder="Имена участников" autocomplete="off">
+          </div>
+        </div>
+        <div class="event__bottom">
+          <textarea class="popup__desc input" id="eventDesc" placeholder="Описание" autocomplete="off"></textarea>
+          <div class="popup__buttons">
+            <button class="popup__button btn btn-extra" id="eventDone">Готово</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="view popup" id="viewPopup">
+        <img class="popup__arrow" src="img/popup/arrowLeft.svg" alt="arrow" />
+        <div class="close">
+          <div class="close__cross" id="viewClose">
+            <img class="popup__img" src="img/popup/cross.svg" alt="close">
+          </div>
+        </div>
+        <div class="view__info">
+          <div class="view__title" id="viewTitle">Напиться</div>
+          <div class="view__date" id="viewDate">14 сентября</div>
+          <div class="view__peoples">
+            <p class="view__people">Участники:</p>
+            <p class="view__list" id="viewPeople"></p>
+            <span class="view__tooltip visible" id="peopleTooltip"></span>
+          </div>
+        </div>
+        <textarea class="popup__desc input" id="viewDesc" placeholder="Описание"></textarea>
+        <div class="popup__buttons">
+          <button class="popup__button btn btn-extra" id="viewDone">Готово</button>
+          <button class="popup__button btn btn-extra" id="viewDelete">Удалить</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

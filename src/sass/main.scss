@@ -1,0 +1,72 @@
+//Настройки
+@import "_config/variables";
+@import "_config/fonts";
+
+//Миксины
+@import "_mixins/reset";
+@import "_mixins/container";
+@import "_mixins/flex";
+@import "_mixins/shadow";
+
+//Импорт скроллбара
+@import "./node_modules/simplebar/dist/simplebar";
+
+//Компоненты
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  @include reset-model();
+}
+
+button {
+  @include reset-button();
+}
+
+input,
+button,
+textarea,
+select {
+  outline: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.wrapper {
+  @include wrapper();
+}
+
+.container {
+  @include container();
+}
+
+html,
+body {
+  @include reset-model();
+  min-height: 100vh;
+  background-color: $white;
+  @include font18();
+}
+
+//Импорт блоков
+//UI
+@import "blocks/btn.scss";
+@import "blocks/input.scss";
+
+//Main blocks
+@import "blocks/header.scss";
+@import "blocks/control.scss";
+@import "blocks/calendar.scss";
+
+//Header popup
+@import "blocks/popup.scss";
+@import "blocks/quickPopup.scss";
+@import "blocks/searchPopup.scss";
+
+//Calendar popups
+@import "blocks/modal.scss";
+@import "blocks/eventPopup.scss";
+@import "blocks/viewPopup.scss";
